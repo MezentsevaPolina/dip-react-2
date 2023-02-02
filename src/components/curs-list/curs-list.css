@@ -1,0 +1,30 @@
+.butlist{
+    border: 4px;
+    margin-top: 40px;
+    margin-left: 20px;
+    padding: 10px 20px;
+    height: 100%;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 20px;
+    color: rgb(73, 46, 32);
+    background-color: transparent;
+    transition: 0.2s;
+}
+.butlist:hover{
+    border-style: none solid none solid;
+    color: #53117c;
+}
+.butlist:focus{
+    border-style: none solid none solid;
+    color: #53117c;
+    background-color: rgb(240, 228, 255);
+}
+.butlist__act{
+    border-bottom-style: solid;
+    color: #53117c;
+}
+.curs__navigation{
+    background-color: transparent;
+    border: 4px;
+}
