@@ -1,10 +1,10 @@
 html{
-    height: 100%;
+    height: 5000px;
 }
 body {
     font-family: "Century Gothic", sans-serif;
-    height: 100%;
-    background: linear-gradient(#dac2ff, #ffffff 99%);
+    height: 100vh;
+    background: linear-gradient(#dac2ff, #ffffff 25%);
 }
 
 .g_title{
