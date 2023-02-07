@@ -8,6 +8,8 @@ import RegistrationForm from "./components/login/RegistrationForm";
 import CursListAll from "./components/curs-list/CursListAll";
 import CursListPop from "./components/curs-list/CursListPop";
 import CursListFree from "./components/curs-list/CursListFree";
+import CursForm from "./components/curs-data/CursForm";
+import UserForm from "./components/user/UserForm";
 
 function App() {
   return <>
@@ -19,6 +21,8 @@ function App() {
                 <Route path='/allclass' element={<CursListAll/>}/>
                 <Route path='/popclass' element={<CursListPop/>}/>
                 <Route path='/freeclass' element={<CursListFree/>}/>
+                <Route path='/cursform' element={<CursForm/>}/>
+                <Route path='/user' element={<UserForm/>}/>
             </Routes>
         </div>
   </>;

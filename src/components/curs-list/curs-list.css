@@ -15,9 +15,9 @@
 .butlist:hover{
     border-style: none solid none solid;
     color: #53117c;
-    /*градиент!!!!!!*/
-    background-color: rgb(240, 228, 255);
+    background-image: linear-gradient(rgba(0, 0, 0, 0) 20%, #F0E4FFFF 50%);
 }
+
 
 .curs__navigation{
     background-color: transparent;
@@ -70,12 +70,76 @@
 .card:hover {
     box-shadow: 4px 8px 16px rgb(183, 124, 255);
 }
+/*сердечко*/
+.heart {
+    position: relative;
+    width: 15px;
+    height: 26px;
+    background-color: #fdb7b7;
+    box-shadow: -1px 0px 2px #444;
+    -webkit-border-radius: 50px 50px 0 0;
+    -moz-border-radius: 50px 50px 0 0;
+    border-radius: 50px 50px 0 0;
+    /* Определяем угол наклона */
+    -webkit-transform: rotate(315deg);
+    -moz-transform: rotate(315deg);
+    -ms-transform: rotate(315deg);
+    -o-transform: rotate(315deg);
+    transform: rotate(315deg);
+}
+/* Формируем правую часть */
+.heart:before {
+    position: absolute;
+    width: 26px;
+    height: 15px;
+    left: 0;
+    bottom: 0;
+    content: "";
+    background-color: #fdb7b7;
+    box-shadow: 0px 3px 3px #444444;
+    -webkit-border-radius: 50px 50px 0 0;
+    -moz-border-radius: 50px 50px 0 0;
+    border-radius: 0 50px 50px 0;
+}
+/* Убираем тень при наведении */
+.heart:hover:before, .heart:hover{
+    box-shadow:none;
+}
 .card__favor{
     position: absolute;
     top: 10px;
     right: 10px;
     height: 25px;
     width: 25px;
+}
+.heart__active{
+    position: relative;
+    width: 15px;
+    height: 26px;
+    background-color: #850808;
+    box-shadow: -1px 0px 2px #444;
+    -webkit-border-radius: 50px 50px 0 0;
+    -moz-border-radius: 50px 50px 0 0;
+    border-radius: 50px 50px 0 0;
+    /* Определяем угол наклона */
+    -webkit-transform: rotate(315deg);
+    -moz-transform: rotate(315deg);
+    -ms-transform: rotate(315deg);
+    -o-transform: rotate(315deg);
+    transform: rotate(315deg);
+}
+.heart__active:before {
+    position: absolute;
+    width: 26px;
+    height: 15px;
+    left: 0;
+    bottom: 0;
+    content: "";
+    background-color: #850808;
+    box-shadow: 0px 3px 3px #444444;
+    -webkit-border-radius: 50px 50px 0 0;
+    -moz-border-radius: 50px 50px 0 0;
+    border-radius: 0 50px 50px 0;
 }
 
 .card__top {
@@ -110,28 +174,19 @@
 }
 
 .card__prices {
-    display: flex;
     margin-top: 10px;
     margin-bottom: 10px;
-    /*flex: 0 0 50%; /* Размещаем длительность и число равномерно в две колонки */
+}
+.card__price--common {
+    font-weight: 400;
+    font-size: 14px;
+    color: #606060;
 }
 
 .card__price--discount {
     font-weight: bold;
-    font-size: 19px;
+    font-size: 15px;
     color: #414141;
-    display: flex;
-    flex-wrap: wrap-reverse;
-
-}
-
-.card__price--common {
-    font-weight: 400;
-    font-size: 17px;
-    color: #606060;
-    display: flex;
-    flex-wrap: wrap-reverse;
-    justify-content: flex-end;
 }
 
 .card__add {

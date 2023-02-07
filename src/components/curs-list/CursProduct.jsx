@@ -3,12 +3,13 @@ import './curs-list.css'
 import ProductImage from "./example.jpg";
 import Fav from "./fav.jpg";
 import Fav2 from "./fav2.jpg"
+import {Link} from "react-router-dom";
 
 const CursProduct = () => {
-    function favor() {
-        const hurt = document.getElementById('hurt');
-        hurt.src = Fav2;
-    }
+    const heartClick = function() {
+        document.getElementById("heart").classList.toggle("heart__active");
+    };
+
     return <>
         <div className="card">
             <div className="card__top">
@@ -17,21 +18,19 @@ const CursProduct = () => {
                         src={ProductImage}
                     />
                 </a>
-                    <img id="hurt"
-                        className="card__favor" src={Fav}
-                        onClick={favor}
-                    />
+                <div className="card__favor">
+                    <div id="heart" className="heart"></div>
+                </div>
 
-                <div className="card__label">Название курса cfeabjkbkjabcjkbab hahdbah</div>
+                <Link to="/cursform" className="card__label">Название курса cfeabjkbkjabcjkbab hahdbah</Link>
             </div>
             <div className="card__bottom">
                 Краткое описание ljfwsjvjks jkshdjs hsijhsdjbv afhkhgoejhrpo fjkvjwsbh ghuregheruj uhgiughur
                 <div className="card__prices">
-                    <div className="card__price card__price--common">Длительность - </div>
-                    <div className="card__price card__price--discount">100 лет</div>
+                    <label className="card__price--common">Длительность - <label className="card__price--discount">6 месяцев</label></label><br/>
+                    <div className="card__price--common">Стоимость - <label className="card__price--discount">3000р в месяц</label></div>
                 </div>
-                <button className="card__add">В избранное</button>
-                <button className="card__add">Записаться</button>
+                <button className="card__add" onClick={heartClick}>В избранное</button>
             </div>
         </div>
     </>
