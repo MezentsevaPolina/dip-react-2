@@ -6,7 +6,7 @@
     height: 50px;
     text-transform: uppercase;
     position: fixed;
-    z-index: 1;
+    z-index: 4;
 }
 .header__navigation{
     position: absolute;
@@ -64,6 +64,7 @@
 .dropdown {
     float: left;
     overflow: hidden;
+
 }
 .dropdown .dropbtn {
     border: 4px;
@@ -98,7 +99,8 @@
     text-transform: none;
     line-height: 2;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 2;
+    z-index: 3;
+    border-radius: 0 0 3px 3px;
 }
 .dropdown-content a{
     text-decoration: none;

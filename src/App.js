@@ -10,6 +10,8 @@ import CursListPop from "./components/curs-list/CursListPop";
 import CursListFree from "./components/curs-list/CursListFree";
 import CursForm from "./components/curs-data/CursForm";
 import UserForm from "./components/user/UserForm";
+import Contacts from "./components/contacts/Contacts";
+import CertificateList from "./components/certificate/CertificateList";
 
 function App() {
   return <>
@@ -23,6 +25,8 @@ function App() {
                 <Route path='/freeclass' element={<CursListFree/>}/>
                 <Route path='/cursform' element={<CursForm/>}/>
                 <Route path='/user' element={<UserForm/>}/>
+                <Route path='/contacts' element={<Contacts/>}/>
+                <Route path='/certificates' element={<CertificateList/>}/>
             </Routes>
         </div>
   </>;

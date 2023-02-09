@@ -33,7 +33,7 @@ const Header = () => {
                         <Link to="/">Browmaker</Link>
                     </div>
                 </div>
-                <Link to="/login" className="butheader">Контакты</Link>
+                <Link to="/contacts" className="butheader">Контакты</Link>
                 <Link to="/login" className="butheader">Войти</Link>
             </div>
         </div>
